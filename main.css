@@ -1,62 +1,129 @@
-body{
+:root {
+    --base-outline-color: rgb(255, 122, 32);
+    --base-text-color: rgb(210, 201, 197);
+
+    --top-margin: 50px;
+}
+
+body {
     background-image: url("img/background.png");
+    background-attachment: fixed;
+    background-size: cover;
+
     display: flex;
+    flex-direction: column;
     align-items: center;
     background-size: cover;
     justify-content: center;
-    height: 100vh;
+
+    height: 100%;
+    margin: 0;
 }
-#main{
+
+#intro {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#title-section {
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.834), rgba(255, 255, 255, 0));
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#title-section p {
+    color: rgb(219, 219, 219);
+    font-size: 24px;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+#title-section h1 {
+    color: rgb(255, 122, 32);
+    font-size: 168px;
+}
+
+#main {
     width: 1100px;
     height: 100vh;
-    background-color: white;
+    margin-top: var(--top-margin);
+    padding: 45px;
+    border-radius: 45px 45px 45px 45px;
+
+    background: linear-gradient(to top, #15171e 15%, #282c39);
 
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
-#images{
+
+#images {
     display: flex;
     justify-content: center;
 }
 
-#socials{
+#socials {
     display: flex;
     justify-content: center;
 }
-#socials a{
+
+#socials a {
     margin: 10px;
 }
-img{
+
+p {
+    color: var(--base-text-color);
+    font-size: 18px;
+}
+
+h1 {
+    color: var(--base-outline-color);
+    font-size: 88px;
+}
+
+h2 {
+    color: var(--base-outline-color);
+}
+
+img {
     width: 500px;
     height: 281px;
     padding: 10px;
 }
 
-video{
+video {
     width: 500px;
     height: 281px;
     padding: 10px;
 }
 
-form{
+form {
     margin-top: 50px;
     width: 450px;
 }
-form label{
+
+form label {
     font-weight: bold;
 }
 
-input{
+input {
     width: 100%;
 }
 
-button{
+button {
     margin-top: 10px;
     width: 100%;
     height: 56px;
-    background-color:rgb(76, 170, 216);
+    background-color: rgb(76, 170, 216);
     border: none;
     color: white;
     padding: 5px;
