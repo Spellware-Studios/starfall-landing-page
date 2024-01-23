@@ -3,7 +3,21 @@
     --base-text-color: rgb(210, 201, 197);
 
     --top-margin: 50px;
+
+    --button-color: rgb(216, 103, 27);
+    --button-highlight-color: rgb(255, 122, 32);
+    --button-text-color: rgb(227, 227, 227);
+    --button-text-highlight-color: rgb(255, 255, 255);
 }
+
+::selection {
+    background-color: rgb(202, 96, 26);
+    color: rgb(211, 202, 198);
+}
+
+/* ::selection {
+    background-color: var(--button-color);
+} */
 
 body {
     background-image: url("img/background.png");
@@ -24,12 +38,13 @@ body {
     height: 100vh;
     width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
 #title-section {
-    background: radial-gradient(circle, rgba(0, 0, 0, 0.834), rgba(255, 255, 255, 0));
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.665) 60%, rgba(255, 255, 255, 0));
     width: 100%;
 
     display: flex;
@@ -51,15 +66,70 @@ body {
     font-size: 168px;
 }
 
+#title-button-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 #main {
     width: 1100px;
-    height: 100vh;
+    height: auto;
     margin-top: var(--top-margin);
     padding: 45px;
     border-radius: 45px 45px 45px 45px;
 
-    background: linear-gradient(to top, #15171e 15%, #282c39);
+    background: linear-gradient(to top, #15171e 65%, #282b39);
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.section {
+    margin-bottom: 200px;
+}
+
+#what-section {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: row;
+}
+
+#action-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#action-section p {
+    text-align: center;
+}
+
+#explore-section {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#explore-section .explore-section-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#multiplayer-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#multiplayer-section .multiplayer-section-top {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -120,12 +190,23 @@ input {
 }
 
 button {
-    margin-top: 10px;
-    width: 100%;
+    margin: 5px;
+    width: 200px;
     height: 56px;
-    background-color: rgb(76, 170, 216);
-    border: none;
-    color: white;
+    background-color: var(--button-color);
+    color: var(--button-text-color);
     padding: 5px;
     font-size: 20px;
+
+    border-style: solid;
+    border-radius: 0.5px;
+    border-color: var(--button-text-color-);
+
+    transition: border-radius 0.3s ease;
+}
+
+button:hover {
+    color: var(--button-text-highlight-color);
+    background-color: var(--button-highlight-color);
+    border-radius: 18px;
 }
