@@ -189,8 +189,12 @@ body {
 }
 
 #socials a {
-    color: var(--base-outline-color);
+    color: var(--button-color);
     padding: 10px;
+}
+
+#socials a:hover {
+    color: var(--button-highlight-color)
 }
 
 #images {
@@ -199,12 +203,26 @@ body {
 }
 
 #socials {
-    display: flex;
-    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    z-index: 1000;
 }
 
 #socials a {
-    margin: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.socials-wrapper {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.665) 60%, rgba(255, 255, 255, 0));
 }
 
 #error-text {
