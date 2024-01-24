@@ -47,6 +47,8 @@ body {
     background: radial-gradient(circle, rgba(0, 0, 0, 0.665) 60%, rgba(255, 255, 255, 0));
     width: 100%;
 
+    padding-bottom: 10px;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -89,6 +91,7 @@ body {
 
 .section {
     margin-bottom: 200px;
+    width: 100%;
 }
 
 #what-section {
@@ -124,7 +127,7 @@ body {
 
 #multiplayer-section {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     flex-direction: column;
 }
@@ -133,7 +136,37 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: row;
+}
+
+#multiplayer-section .multiplayer-section-bottom {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    flex-direction: row;
+}
+
+#multiplayer-section .multiplayer-section-bottom p {
+    text-align: center;
+}
+
+#newsletter-section-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
+}
+
+.newsletter-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#socials a {
+    color: var(--base-outline-color);
+    padding: 10px;
 }
 
 #images {
@@ -151,6 +184,11 @@ body {
 }
 
 p {
+    color: var(--base-text-color);
+    font-size: 18px;
+}
+
+label {
     color: var(--base-text-color);
     font-size: 18px;
 }
@@ -177,7 +215,6 @@ video {
 }
 
 form {
-    margin-top: 50px;
     width: 450px;
 }
 
