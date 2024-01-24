@@ -17,15 +17,23 @@
             <p>Explore a charming, retro-style 3D sandbox world,
                 defeat ever more fearsome foes, claim ever more legendary treasures.</p>
 
+
             <div id="newsletter-section-top" class="newsletter-section">
+                <p id="thank-you-message">Thank you! We'll keep you updated.</p>
                 <form id="newsletter-form-top" class="newsletter-form">
                     <label>Subscribe to our newsletter</label>
-                    <input id="email" type="text">
-                    <button>Subscribe</button>
+                    <input id="email" type="text" placeholder="Email Address">
+                    <p id="error-text" class="error-text">Please enter a valid email.</p>
+                    <button type="button" id="subscribe-top" onclick="sendEmail()">Subscribe</button>
                 </form>
+                <div id="loader-top" class="loader"></div>
+            </div>
+
+            <div id="image-section" class="images">
+                <video autoplay muted loop src="img/shield.webm"></video>
+                <video autoplay muted loop src="img/firejump.webm"></video>
             </div>
         </div>
-
 
     </div>
 
