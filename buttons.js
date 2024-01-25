@@ -4,26 +4,45 @@ const scrollSpeed = 5; // seconds
 function sendEmail() {
   disableErrorMessage();
 
-  var button = document.getElementById("subscribe-top");
-  var loader = document.getElementById("loader-top");
   var email = document.getElementById("email").value;
 
-  enableLoader(loader, button);
+  enableLoader();
 
   check = validateEmail(email);
 
-  console.log("Email: " + email);
-
   if (check) {
-    new Promise((resolve, reject) => {
-      // api call
-      // if api call fails
-      showEmailSuccess();
+    handleAPICall(email).catch(() => {
+      disableLoader();
+      showError("Something went wrong.");
     });
   } else {
     showError("Please enter a valid email.");
-    disableLoader(loader, button);
+    disableLoader();
   }
+}
+
+async function handleAPICall(email) {
+  await fetch("/.netlify/functions/mail", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ email: email }),
+  })
+    .then((response) => {
+      response.json().then((bd) => {
+        if (response.status == 200) {
+          showEmailSuccess();
+        } else {
+          disableLoader();
+          showError("Something went wrong.");
+        }
+      });
+    })
+    .catch(() => {
+      disableLoader();
+      showError("Something went wrong.");
+    });
 }
 
 function showEmailSuccess() {
@@ -47,12 +66,18 @@ function disableErrorMessage() {
   errorTextField.style.display = "none";
 }
 
-function enableLoader(loader, button) {
+function enableLoader() {
+  var button = document.getElementById("subscribe-top");
+  var loader = document.getElementById("loader-top");
+
   button.style.display = "none";
   loader.style.display = "inline-block";
 }
 
-function disableLoader(loader, button) {
+function disableLoader() {
+  var button = document.getElementById("subscribe-top");
+  var loader = document.getElementById("loader-top");
+
   loader.style.display = "none";
   button.style.display = "inline-block";
 }

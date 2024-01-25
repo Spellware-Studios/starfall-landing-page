@@ -57,6 +57,7 @@ body {
     border-radius: 10px;
     margin-top: 10px;
     padding: 10px;
+    text-align: center;
 }
 
 #title-section h1 {
@@ -96,6 +97,11 @@ body {
 
 #image-section {
     margin-top: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
 }
 
 #main {
@@ -326,5 +332,42 @@ input {
 
     100% {
         transform: rotate(360deg);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #intro {
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+
+    h1 {
+        font-size: 58px !important;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    #intro {
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+
+    #image-section {
+        flex-direction: column;
+    }
+
+    h1 {
+        font-size: 58px !important;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1400px) {
+    #intro {
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+
+    h1 {
+        font-size: 72px !important;
     }
 }
