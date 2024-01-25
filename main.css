@@ -104,87 +104,9 @@ body {
     flex-direction: row;
 }
 
-#main {
-    width: 1100px;
-    height: auto;
-    margin-top: var(--top-margin);
-    padding: 45px;
-    border-radius: 45px 45px 45px 45px;
-
-    background: linear-gradient(to top, #15171e 65%, #282b39);
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
 .section {
     margin-bottom: 200px;
     width: 100%;
-}
-
-#what-section {
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    flex-direction: row;
-}
-
-#action-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-#action-section p {
-    text-align: center;
-}
-
-#explore-section {
-    display: flex;
-    align-items: start;
-    justify-content: center;
-    flex-direction: column;
-}
-
-#explore-section .explore-section-bottom {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#multiplayer-section {
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    flex-direction: column;
-}
-
-#multiplayer-section .multiplayer-section-top {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-}
-
-#multiplayer-section .multiplayer-section-bottom {
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-    flex-direction: row;
-}
-
-#multiplayer-section .multiplayer-section-bottom p {
-    text-align: center;
-}
-
-#newsletter-section-bottom {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
 }
 
 .newsletter-form {
@@ -192,6 +114,11 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+
+.newsletter-form label {
+    color: rgb(235, 234, 234);
+    font-size: 22px;
 }
 
 #socials a {
@@ -354,6 +281,14 @@ input {
 
     #image-section {
         flex-direction: column;
+    }
+
+    #intro p {
+        max-width: 75%;
+    }
+
+    #title-section {
+        height: auto;
     }
 
     h1 {
