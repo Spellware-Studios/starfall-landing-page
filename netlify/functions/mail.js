@@ -20,7 +20,7 @@ exports.handler = async function (event, context) {
     const response = await fetch(url, {
       method: "POST",
       headers: {
-        Authorization: "Basic ${process.env.MAILCHIMP_API_KEY}",
+        Authorization: 'Basic ${process.env.MAILCHIMP_API_KEY}',
       },
       body: JSON.stringify({
         email_address: email,
