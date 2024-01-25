@@ -17,10 +17,12 @@ exports.handler = async function (event, context) {
     // Send to mail api
     const url = "https://us9.api.mailchimp.com/3.0/lists/7015e98a5a/members";
 
+    const authorization = "Basic " + process.env.MAILCHIMP_API_KEY;
+
     const response = await fetch(url, {
       method: "POST",
       headers: {
-        Authorization: 'Basic ${process.env.MAILCHIMP_API_KEY}',
+        Authorization: authorization,
       },
       body: JSON.stringify({
         email_address: email,
